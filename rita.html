@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Артём & Мария</title>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+
+    body {
+      background: #fafafa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 70px 20px 50px;
+      background: white;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: #222;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #777;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      border-radius: 12px;
+      margin: 20px auto 50px;
+      display: block;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.1);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    .section {
+      margin: 70px 0;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      font-weight: 300;
+      color: #333;
+    }
+
+    .section p {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* Галерея */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Форма */
+    form {
+      background: #fff;
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.07);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 13px;
+      margin: 12px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #d4af37;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1.05rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: opacity 0.3s;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    button:hover {
+      opacity: 0.92;
+    }
+
+    .success {
+      color: #2e7d32;
+      font-weight: 500;
+      margin-top: 20px;
+      display: none;
+    }
+
+    /* Программа дня */
+    .timeline {
+      text-align: left;
+      max-width: 600px;
+      margin: 25px auto 0;
+    }
+
+    .timeline-item {
+      margin-bottom: 20px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      background: #d4af37;
+      border-radius: 50%;
+    }
+
+    .timeline-time {
+      font-weight: 600;
+      color: #d4af37;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #888;
+      font-size: 0.95rem;
+      border-top: 1px solid #eee;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.1rem; }
+      .section h2 { font-size: 1.6rem; }
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <header data-aos="fade-down" data-aos-duration="1000">
+    <h1>Артём & Мария</h1>
+    <p class="subtitle">С любовью приглашаем вас на нашу свадьбу</p>
+  </header>
+
+  <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+       alt="Свадьба" class="hero-img" data-aos="zoom-in" data-aos-delay="200">
+
+  <div class="container">
+
+    <!-- История -->
+    <div class="section" data-aos="fade-up">
+      <h2>Наша история</h2>
+      <p>Мы познакомились осенью 2020 года на одном из московских хакатонов.</p>
+      <p>С тех пор прошло более пяти лет дружбы, поддержки и совместных путешествий.</p>
+      <p>И теперь мы готовы начать новый этап — вместе.</p>
+    </div>
+
+    <!-- Дата и место -->
+    <div class="section" data-aos="fade-up" data-aos-delay="100">
+      <h2>Когда и где</h2>
+      <p><strong>15 июня 2026 года</strong></p>
+      <p>Начало в <strong>15:00</strong></p>
+      <p>Усадьба «Лесная тишина»<br>Московская область, Наро-Фоминский район</p>
+    </div>
+
+    <!-- Программа дня -->
+    <div class="section" data-aos="fade-right" data-aos-delay="200">
+      <h2>Программа дня</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">15:00</div>
+          <div>Встреча гостей, welcome-напитки</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">16:30</div>
+          <div>Церемония бракосочетания</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">17:30</div>
+          <div>Фотосессия и прогулка по усадьбе</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">19:00</div>
+          <div>Фуршет и первый танец</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">22:00</div>
+          <div>Afterparty до самого утра!</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Галерея -->
+    <div class="section" data-aos="fade-left" data-aos-delay="300">
+      <h2>Наши моменты</h2>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1506744038133-f52f8f10a65c?auto=format&fit=crop&w=300&q=80" alt="Пара 1">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=300&q=80" alt="Пара 2">
+        <img src="https://images.unsplash.com/photo-1511272201039-5e569e5c3d00?auto=format&fit=crop&w=300&q=80" alt="Пара 3">
+        <img src="https://images.unsplash.com/photo-1529334009268-7e83e6b7a5c0?auto=format&fit=crop&w=300&q=80" alt="Пара 4">
+        <img src="https://images.unsplash.com/photo-1516937830860-2c9f4c85e4a2?auto=format&fit=crop&w=300&q=80" alt="Пара 5">
+        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=300&q=80" alt="Пара 6">
+      </div>
+    </div>
+
+    <!-- RSVP форма -->
+    <div class="section" data-aos="zoom-out" data-aos-delay="400">
+      <h2>Подтвердите участие</h2>
+      <form id="rsvpForm">
+        <input type="text" id="name" placeholder="Ваше имя и фамилия *" required>
+        <select id="drink" required>
+          <option value="">Что вы будете пить? *</option>
+          <option value="Шампанское">Шампанское</option>
+          <option value="Белое вино">Белое вино</option>
+          <option value="Красное вино">Красное вино</option>
+          <option value="Водка">Водка</option>
+          <option value="Безалкогольный коктейль">Безалкогольный коктейль</option>
+          <option value="Не пью">Не пью</option>
+        </select>
+        <textarea id="message" placeholder="Пожелания или комментарии"></textarea>
+        <button type="submit">Отправить RSVP</button>
+        <div class="success" id="success">Спасибо! Мы с радостью ждём вас 💍</div>
+      </form>
+    </div>
+
+    <!-- Контакты -->
+    <div class="section" data-aos="flip-up" data-aos-delay="500">
+      <h2>Вопросы?</h2>
+      <p>Напишите Артёму: +7 (999) 123-45-67</p>
+      <p>Или Марии: hello@mariawedding.ru</p>
+    </div>
+
+  </div>
+
+  <footer data-aos="fade-up" data-aos-delay="600">
+    С любовью, Артём и Мария • 15 июня 2026
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 900,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+
+    // === ВСТАВЬТЕ СВОИ ДАННЫЕ ===
+    const BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE';
+    const CHAT_ID = 'YOUR_CHAT_ID_HERE';
+
+    document.getElementById('rsvpForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const drink = document.getElementById('drink').value;
+      const message = document.getElementById('message').value.trim() || '—';
+
+      const text = `💌 RSVP:\nИмя: ${name}\nНапиток: ${drink}\nКомментарий: ${message}`;
+
+      try {
+        const res = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chat_id: CHAT_ID, text })
+        });
+
+        if (res.ok) {
+          document.getElementById('success').style.display = 'block';
+          document.getElementById('rsvpForm').reset();
+          document.querySelector('button[type="submit"]').disabled = true;
+        } else {
+          alert('Ошибка отправки. Проверьте подключение.');
+        }
+      } catch (err) {
+        alert('Не удалось отправить данные.');
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>
