@@ -37,7 +37,7 @@
 
 .top-text {
     top: -60px;
-    font-size: 28px;
+    font-size: 36px;
     font-family: "Comforter";
     font-weight: 400;
     line-height: 1;
@@ -75,7 +75,7 @@
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 16px;
+    font-size: 13px;
     text-align: center;
     line-height: 1.2;
     padding: 4px;
