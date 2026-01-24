@@ -6,3 +6,7 @@
     font-family: "Andika";
     src: url('../fonts/Andika-Regular.ttf');
 }
+@font-face {
+    font-family: "Briem";
+    src: url('../fonts/BriemHand-SemiBold.ttf');
+}

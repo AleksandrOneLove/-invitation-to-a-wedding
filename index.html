@@ -10,6 +10,10 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+  <audio id="music-player" loop preload="auto">
+    <source src="audio/attestat.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио.
+  </audio>
   <div class="invite">
     <div class="envelope" id="envelope">
       <!-- Тексты -->
@@ -40,38 +44,12 @@
 
   <!-- Фото с подписями -->
   <div class="photos-container">
-    <div class="photo-item" data-aos="zoom-in-right" data-aos-delay="200">
-      <img src="https://via.placeholder.com/300x400/ddd/333?text=Фото+Илюши" alt="Илюша в детстве" class="photo">
-      <p class="caption">— Интересно, кто будет моей женой?</p>
-    </div>
-    <div class="photo-item" data-aos="zoom-in-left" data-aos-delay="200">
-      <img src="https://via.placeholder.com/300x400/ddd/333?text=Фото+Маргоши" alt="Маргоша в детстве" class="photo">
-      <p class="caption">— Ей буду я!</p>
-      <div class="ribbon">🎀</div>
-    </div>
+    <img src="img/1.png" alt="">
   </div>
 
   <!-- Календарь -->
   <div class="calendar" data-aos="flip-up" data-aos-delay="400">
-    <h2 class="month">Июль 2026</h2>
-    <div class="weekdays">
-      <span>пн</span>
-      <span>вт</span>
-      <span>ср</span>
-      <span>чт</span>
-      <span>пт</span>
-      <span class="weekend">сб</span>
-      <span class="weekend">вс</span>
-    </div>
-    <div class="days">
-      <span>30</span>
-      <span>31</span>
-      <span>1</span>
-      <span>2</span>
-      <span>3</span>
-      <span class="highlight">❤️<br>4</span>
-      <span>5</span>
-    </div>
+    <img src="img/2.png" alt="">
   </div>
 
 </div>
@@ -129,10 +107,11 @@ tl
   }, "-=0.6")
 
 
-
+    const musicPlayer = document.getElementById('music-player');
     const heart = document.querySelector(".seal");
     heart.addEventListener("click", () => {
       tl.play();
+       musicPlayer.play().catch(e => console.log("Автовоспроизведение отклонено:", e));
     });
 
      AOS.init({

@@ -11,60 +11,28 @@
 .names {
   font-size: 36px;
   font-weight: 400;
-  margin: 30px 0 20px;
+  margin: 10px 0;
   letter-spacing: 1px;
-  font-family: "Comforter", cursive;
+  font-family: "Briem";
 }
 
 .photos-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 20px 0;
-  flex-wrap: wrap;
+  margin-top: 16%;
+}
+.photos-container img{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+.calendar img{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
 }
 
-.photo-item {
-  position: relative;
-  text-align: center;
-  width: 300px;
-  max-width: 100%;
-}
-
-.photo {
-  width: 100%;
-  height: auto;
-  border: 2px solid #A10000;
-  border-radius: 8px;
-  filter: grayscale(100%);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.caption {
-  font-size: 16px;
-  font-style: italic;
-  margin: 10px 0 0;
-  font-family: "Andika";
-  line-height: 1.4;
-}
-
-.ribbon {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background: #A10000;
-  color: white;
-  font-size: 24px;
-  padding: 5px 10px;
-  border-radius: 50%;
-  transform: rotate(-15deg);
-  z-index: 2;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
 
 .calendar {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .month {

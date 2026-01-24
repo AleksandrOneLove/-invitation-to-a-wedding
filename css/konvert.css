@@ -105,8 +105,9 @@
     transform: translateY(5px) rotateY(180deg);
 }
 
-.body {
+body {
     color: #A10000;
+    background-color: #FFFCF8;
 }
 
 .envelope-lines {
