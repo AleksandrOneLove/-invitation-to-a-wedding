@@ -8,16 +8,15 @@
     position: relative;
     width: 100%;
     max-width: 580px;
-    margin: 25vh auto 0;
+    margin: 1px auto 0;
 }
 
 .envelope {
     position: relative;
     width: 100%;
     height: 240px; /* Можно оставить фиксированной или сделать адаптивной */
+    margin-top: 25vh;
 }
-
-
 
 /* Верхний текст */
 .top-text,
@@ -98,10 +97,6 @@
     transition: opacity 0.8s ease, transform 0.8s ease;
     text-align: center;
     margin-top: 20px;
-}
-
-.inner {
-    text-align: center;
 }
 
 .small-heart {

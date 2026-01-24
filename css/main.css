@@ -1,0 +1,143 @@
+
+.invitation-inner {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Cormorant Garamond', serif;
+  color: #A10000;
+  text-align: center;
+}
+
+.names {
+  font-size: 36px;
+  font-weight: 400;
+  margin: 30px 0 20px;
+  letter-spacing: 1px;
+  font-family: "Comforter", cursive;
+}
+
+.photos-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.photo-item {
+  position: relative;
+  text-align: center;
+  width: 300px;
+  max-width: 100%;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  border: 2px solid #A10000;
+  border-radius: 8px;
+  filter: grayscale(100%);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.caption {
+  font-size: 16px;
+  font-style: italic;
+  margin: 10px 0 0;
+  font-family: "Andika";
+  line-height: 1.4;
+}
+
+.ribbon {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #A10000;
+  color: white;
+  font-size: 24px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  transform: rotate(-15deg);
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.calendar {
+  margin-top: 30px;
+}
+
+.month {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 15px;
+  font-family: "Comforter", cursive;
+}
+
+.weekdays {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Andika";
+}
+
+.weekdays span {
+  width: 30px;
+  text-align: center;
+}
+
+.weekdays .weekend {
+  color: #A10000;
+  font-weight: bold;
+}
+
+.days {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.days span {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-family: "Andika";
+  line-height: 1;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.days span:hover {
+  background: #ffebee;
+}
+
+.highlight {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background: #A10000;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40px !important;
+  height: 40px !important;
+  box-shadow: 0 0 10px rgba(161, 0, 0, 0.5);
+}
+
+.highlight::before {
+  content: "❤️";
+  font-size: 24px;
+  margin-bottom: 2px;
+}

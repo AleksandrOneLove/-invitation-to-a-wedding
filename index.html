@@ -6,6 +6,8 @@
   <title>Приглашение</title>
   <link rel="stylesheet" href="css/konvert.css">
   <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <div class="invite">
@@ -31,10 +33,51 @@
     </div>
 
     <div class="content">
-      <div class="inner">Само приглашение</div>
+      <div class="invitation-inner">
+
+  <!-- Имена -->
+  <h1 class="names" data-aos="fade-up">Илюша &amp; Маргоша</h1>
+
+  <!-- Фото с подписями -->
+  <div class="photos-container">
+    <div class="photo-item" data-aos="zoom-in-right" data-aos-delay="200">
+      <img src="https://via.placeholder.com/300x400/ddd/333?text=Фото+Илюши" alt="Илюша в детстве" class="photo">
+      <p class="caption">— Интересно, кто будет моей женой?</p>
+    </div>
+    <div class="photo-item" data-aos="zoom-in-left" data-aos-delay="200">
+      <img src="https://via.placeholder.com/300x400/ddd/333?text=Фото+Маргоши" alt="Маргоша в детстве" class="photo">
+      <p class="caption">— Ей буду я!</p>
+      <div class="ribbon">🎀</div>
     </div>
   </div>
 
+  <!-- Календарь -->
+  <div class="calendar" data-aos="flip-up" data-aos-delay="400">
+    <h2 class="month">Июль 2026</h2>
+    <div class="weekdays">
+      <span>пн</span>
+      <span>вт</span>
+      <span>ср</span>
+      <span>чт</span>
+      <span>пт</span>
+      <span class="weekend">сб</span>
+      <span class="weekend">вс</span>
+    </div>
+    <div class="days">
+      <span>30</span>
+      <span>31</span>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span class="highlight">❤️<br>4</span>
+      <span>5</span>
+    </div>
+  </div>
+
+</div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <script>
     const tl = gsap.timeline({ paused: true });
@@ -61,25 +104,43 @@ tl
     ease: "power3.out"
   }, "<")
 
-  // Появление контента
-  .to(".content", {
-    opacity: 1,
-    y: 0,
-    duration: 1,
-    ease: "power2.out"
-  }, "-=0.6")
-
-  // Исчезновение сердца
+// Исчезновение сердца
   .to(".seal", {
     opacity: 0,
     scale: 0.6,
     duration: 0.1
-  }, "-=1");
+  }, "-=1")
+
+.to(".envelope", {
+    marginTop: 0,
+    position:"absolute",
+    opacity: 0,
+    scale: 0.95,
+    duration: 0.8,
+    ease: "power2.inOut"
+}, "<")
+
+  // Появление контента
+  .to(".content", {
+    opacity: 1,
+    y: 0,
+    duration: 0,
+    ease: "power2.out"
+  }, "-=0.6")
+
+
 
     const heart = document.querySelector(".seal");
     heart.addEventListener("click", () => {
       tl.play();
     });
+
+     AOS.init({
+    duration: 1000,     // Длительность анимации
+    once: true,         // Анимация срабатывает только один раз
+    easing: 'ease-in-out',
+    offset: 50          // Отступ до начала анимации
+  });
   </script>
 </body>
 </html>
