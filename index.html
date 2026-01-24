@@ -43,7 +43,7 @@
   <h1 class="names" data-aos="fade-up">Илюша &amp; Маргоша</h1>
 
   <!-- Фото с подписями -->
-  <div class="photos-container">
+  <div class="photos-container" data-aos="flip-up">
     <img src="img/1.png" alt="">
   </div>
 
@@ -146,20 +146,22 @@ tl
     ease: "power2.out"
   }, "-=0.6")
 
+  
 
     const musicPlayer = document.getElementById('music-player');
     const heart = document.querySelector(".seal");
     heart.addEventListener("click", () => {
       tl.play();
        musicPlayer.play().catch(e => console.log("Автовоспроизведение отклонено:", e));
-    });
-
-     AOS.init({
-    duration: 1000,     // Длительность анимации
-    once: true,         // Анимация срабатывает только один раз
+       setTimeout(() => {
+  AOS.init({
+    duration: 1000,
+    once: true,
     easing: 'ease-in-out',
-    offset: 10          // Отступ до начала анимации
+    offset: 80
   });
+}, 1500); // Через 1.5 секунды после загрузки
+    });
 
   function updateCountdown() {
   const targetDate = new Date("2026-07-04T16:00:00").getTime(); // Москва
