@@ -52,6 +52,31 @@
     <img src="img/2.png" alt="">
   </div>
 
+  <div class="countdown-container">
+  <h2 class="countdown-title" data-aos="fade-up">До нашей свадьбы осталось:</h2>
+  <div class="countdown" id="countdown">
+    <div class="countdown-box">
+      <span class="countdown-number" id="days">00</span>
+      <span class="countdown-label">дней</span>
+    </div>
+    <div class="countdown-separator">:</div>
+    <div class="countdown-box">
+      <span class="countdown-number" id="hours">00</span>
+      <span class="countdown-label">часов</span>
+    </div>
+    <div class="countdown-separator">:</div>
+    <div class="countdown-box">
+      <span class="countdown-number" id="minutes">00</span>
+      <span class="countdown-label">минут</span>
+    </div>
+    <div class="countdown-separator">:</div>
+    <div class="countdown-box">
+      <span class="countdown-number" id="seconds">00</span>
+      <span class="countdown-label">секунд</span>
+    </div>
+  </div>
+</div>
+
 </div>
     </div>
   </div>
@@ -120,6 +145,31 @@ tl
     easing: 'ease-in-out',
     offset: 50          // Отступ до начала анимации
   });
+
+  function updateCountdown() {
+  const targetDate = new Date("2026-07-04T16:00:00").getTime(); // Москва
+  const now = new Date().getTime();
+  const diff = targetDate - now;
+
+  if (diff <= 0) {
+    document.getElementById("countdown").innerHTML = '<div style="font-size: 24px; color: #A10000;">Мы уже женаты! ❤️</div>';
+    clearInterval(countdownInterval);
+    return;
+  }
+
+  const day = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hour = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minute = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const second = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerText = String(day).padStart(2, '0');
+  document.getElementById("hours").innerText = String(hour).padStart(2, '0');
+  document.getElementById("minutes").innerText = String(minute).padStart(2, '0');
+  document.getElementById("seconds").innerText = String(second).padStart(2, '0');
+}
+
+updateCountdown(); // Запускаем сразу
+const countdownInterval = setInterval(updateCountdown, 1000);
   </script>
 </body>
 </html>
