@@ -43,7 +43,7 @@
 .countdown-title {
   font-size: 28px;
   color: #A10000;
-  font-family: "Comforter", cursive;
+  font-family: "Andika";
   margin-bottom: 20px;
 }
 
@@ -87,4 +87,19 @@
   font-size: 24px;
   color: #A10000;
   font-weight: bold;
+}
+
+.title-second{
+  font-family: "Comforter";
+  text-align: center;
+  margin: 30px 20px 0px;
+  font-size: 36px;
+}
+
+.text-seconds{
+  line-height: 20px;
+  font-size: 18px;
+}
+.text-second{
+  font-family: "Andika";
 }
