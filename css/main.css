@@ -1,6 +1,6 @@
 
 .invitation-inner {
-  padding: 20px;
+  padding: 20px 0px;
   max-width: 600px;
   margin: 0 auto;
   font-family: 'Cormorant Garamond', serif;
@@ -92,7 +92,8 @@
 .title-second{
   font-family: "Comforter";
   text-align: center;
-  margin: 30px 20px 0px;
+  margin-top: 40px;
+  margin-bottom: 10px;
   font-size: 36px;
 }
 
@@ -102,4 +103,22 @@
 }
 .text-second{
   font-family: "Andika";
+}
+
+.text-third{
+  font-family: "Andika";
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.schedule-block{
+  width: 100%;
+  height: auto;
+}
+.title-third{
+  text-transform: uppercase;
+  font-family: "Andika";
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 10px;
 }
