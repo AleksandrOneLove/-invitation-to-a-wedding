@@ -118,7 +118,51 @@
 .title-third{
   text-transform: uppercase;
   font-family: "Andika";
-  font-size: 28px;
+  font-size: 34px;
   font-weight: 700;
   margin-top: 10px;
+}
+.shervud{
+  width: 60%;
+  height: auto;
+  margin: 20px 5px auto;
+}
+.text-four{
+  font-family: "Andika";
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.texts-four{
+  font-size: 18px;
+  line-height: 1px;
+}
+
+.dress-code-title{
+   font-family: "Andika";
+  font-weight: 700;
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+.map{
+  background-color: #A10000;
+  color:white;
+  padding: 5px 10px;
+  font-family: "Andika";
+  border: none;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  cursor:pointer;
+}
+.dc-background{
+  display: inline-block;
+background: radial-gradient(circle, #A50000, #500101);
+}
+.dc-background img{
+  width: 100%;
+  display: block;
+  height: auto;
 }
