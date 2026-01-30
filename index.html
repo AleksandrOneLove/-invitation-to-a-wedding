@@ -109,6 +109,17 @@
           <img src="img/28.png" alt="" class="dc1">
           <img src="img/29.png" alt="" class="dc1">
       </div>
+      <h4 class="wishes-title">Пожелания</h4>
+      <img src="img/32.png" alt="" class="wishes-img">
+      <img src="img/33.png" alt="" class="wishes-text">
+      <img src="img/34.png" alt="" class="wishes-img2">
+      <img src="img/35.png" alt="" class="wishes-text">
+      
+      <div class="wave-slider" data-aos="fade-up">
+        <div class="wave-mask"></div>
+        <img src="img/36-1.png" alt="Фото 1" class="slider-img">
+      </div>
+
     </div>
     </div>
   </div>
@@ -211,6 +222,82 @@ const countdownInterval = setInterval(updateCountdown, 1000);
 document.getElementById('map').addEventListener('click', function() {
   window.open('https://yandex.ru/maps/1/moscow-and-moscow-oblast/house/territoriya_razdolye_5/Z04YcQ9kT0wCQFtsfX5zdXVkbA==/?l=trf%2Ctrfe&ll=37.780937%2C56.224790&z=13.94', '_blank'); // Подставь свою ссылку
 });
+
+
+// Список путей к фото
+// Проверяем, что элемент существует
+const sliderImg = document.querySelector('.slider-img');
+const waveSlider = document.querySelector('.wave-slider');
+
+const photoPaths = [
+  'img/36-1.png',
+  'img/36-2.png',
+  'img/36-3.png'
+];
+
+let currentPhotoIndex = 0;
+
+// Функция смены фото с анимацией
+const changePhoto = () => {
+  // Увеличиваем индекс, зацикливаем
+  currentPhotoIndex = (currentPhotoIndex + 1) % photoPaths.length;
+
+  // GSAP: скрываем текущее фото
+ gsap.to(sliderImg, {
+  x: -400,
+  opacity: 0,
+  duration: 0.8,
+  ease: "power2.inOut",
+  onComplete: () => {
+    // Не ждём полного исчезновения — сразу начинаем появление нового
+    sliderImg.src = photoPaths[currentPhotoIndex];
+    gsap.fromTo(sliderImg, {
+      x: 500,
+      opacity: 0
+    }, {
+      x: 0,
+      opacity: 1,
+      duration: 1.5,
+      ease: "power2.inOut"
+    });
+  }
+});
+};
+
+// Функция запуска цикла
+const startCycle = () => {
+  // Повторяем каждые 3 секунды
+  setInterval(changePhoto, 4000);
+};
+
+// Проверяем, в зоне ли видимости
+const isInViewport = (el) => {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top <= window.innerHeight * 1.9 &&
+    rect.bottom >= window.innerHeight * 0.9
+  );
+};
+
+if (isInViewport(waveSlider)) {
+  console.log('Блок уже в зоне видимости — запускаем цикл');
+  startCycle();
+} else {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log('Блок вошёл в зону видимости — запускаем цикл');
+          startCycle();
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  observer.observe(waveSlider);
+}
   </script>
 </body>
 </html>

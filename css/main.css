@@ -139,11 +139,16 @@
   line-height: 1px;
 }
 
-.dress-code-title{
+.dress-code-title, .wishes-title{
    font-family: "Andika";
   font-weight: 700;
   margin-top: 20px;
   font-size: 40px;
+  text-transform: uppercase;
+}
+.wishes-title{
+  font-size: 32px;
+  margin-top: 40px;
 }
 
 .map{
@@ -182,4 +187,54 @@
 .dctext-last{
   padding-right: 45% !important;
   padding-left: 20px !important;
+}
+.wishes-img{
+  width: 90%;
+  margin: auto;
+  height: auto;
+}
+
+.wishes-text{
+  width: 80%;
+  margin: auto;
+  height: auto;
+}
+
+.wishes-img2{
+  width: 90%;
+  margin: auto;
+  height: auto;
+  padding-right: 30%;
+}
+
+
+
+.wave-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 800px; /* подбери под свои фото */
+}
+
+.wave-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background: url(../img/30-test.png);
+  background-size: 100% 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.slider-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  z-index: 1;
 }
