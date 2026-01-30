@@ -117,7 +117,7 @@
       
       <div class="wave-slider" data-aos="fade-up">
         <div class="wave-mask"></div>
-        <img src="img/36-1.png" alt="Фото 1" class="slider-img">
+        <img src="img/T1.jpg" alt="Фото 1" class="slider-img">
       </div>
 
     </div>
@@ -230,9 +230,9 @@ const sliderImg = document.querySelector('.slider-img');
 const waveSlider = document.querySelector('.wave-slider');
 
 const photoPaths = [
-  'img/36-1.png',
-  'img/36-2.png',
-  'img/36-3.png'
+  'img/T1.jpg',
+  'img/T2.jpg',
+  'img/T3.jpg'
 ];
 
 let currentPhotoIndex = 0;
@@ -293,7 +293,7 @@ if (isInViewport(waveSlider)) {
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.1 }
   );
 
   observer.observe(waveSlider);
