@@ -266,7 +266,10 @@ const changePhoto = () => {
 
 // Функция запуска цикла
 const startCycle = () => {
-  // Повторяем каждые 3 секунды
+  // Первая смена — через 0.8 сек (чтобы не было резко)
+  setTimeout(changePhoto, 800);
+
+  // Далее — цикл каждые 4 сек
   setInterval(changePhoto, 4000);
 };
 
