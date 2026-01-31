@@ -215,7 +215,7 @@
   max-width: 1000px;
   margin: 0 auto;
   overflow: hidden;
-  height: 800px; /* подбери под свои фото */
+  height: 800px;
 }
 
 .wave-mask {
@@ -227,7 +227,7 @@
   background: url(../img/30-test.png);
   background-size: 100% 100%;
   pointer-events: none;
-  z-index: 2;
+  z-index: 3;
 }
 
 .slider-img {
@@ -237,4 +237,9 @@
   width: 100%;
   height: auto;
   z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.slider-img.active {
+  z-index: 2;
 }

@@ -105,8 +105,7 @@
       </div>
       <div class="dc-background">
           <img src="img/26.png" alt="" class="dc1">
-          <img src="img/27.png" alt="" class="dc1">
-          <img src="img/28.png" alt="" class="dc1">
+          <img src="img/27-28.png" alt="" class="dc1">
           <img src="img/29.png" alt="" class="dc1">
       </div>
       <h4 class="wishes-title">Пожелания</h4>
@@ -117,7 +116,8 @@
       
       <div class="wave-slider" data-aos="fade-up">
         <div class="wave-mask"></div>
-        <img src="img/T1.jpg" alt="Фото 1" class="slider-img">
+        <img src="img/T1.jpg" alt="Фото 1" class="slider-img active">
+        <img src="img/T2.jpg" alt="Фото 2" class="slider-img">
       </div>
 
     </div>
@@ -224,9 +224,7 @@ document.getElementById('map').addEventListener('click', function() {
 });
 
 
-// Список путей к фото
-// Проверяем, что элемент существует
-const sliderImg = document.querySelector('.slider-img');
+const sliderImgs = document.querySelectorAll('.slider-img');
 const waveSlider = document.querySelector('.wave-slider');
 
 const photoPaths = [
@@ -236,40 +234,48 @@ const photoPaths = [
 ];
 
 let currentPhotoIndex = 0;
+let activeIndex = 0; // индекс активного изображения
 
 // Функция смены фото с анимацией
 const changePhoto = () => {
-  // Увеличиваем индекс, зацикливаем
+  // Определяем индексы
+  const currentImg = sliderImgs[activeIndex];
+  const nextImg = sliderImgs[1 - activeIndex]; // переключаемся между 0 и 1
+  
+  // Увеличиваем индекс фото
   currentPhotoIndex = (currentPhotoIndex + 1) % photoPaths.length;
-
-  // GSAP: скрываем текущее фото
- gsap.to(sliderImg, {
-  x: -400,
-  opacity: 0,
-  duration: 0.8,
-  ease: "power2.inOut",
-  onComplete: () => {
-    // Не ждём полного исчезновения — сразу начинаем появление нового
-    sliderImg.src = photoPaths[currentPhotoIndex];
-    gsap.fromTo(sliderImg, {
-      x: 500,
+  
+  // Подготавливаем следующее изображение
+  nextImg.src = photoPaths[currentPhotoIndex];
+  nextImg.style.zIndex = '2'; // ставим на передний план
+  currentImg.style.zIndex = '1'; // убираем на задний
+  
+  // Анимация: текущее уходит влево, новое приходит справа
+  gsap.timeline()
+    .to(currentImg, {
+      x: -400,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power2.inOut"
+    }, 0)
+    .fromTo(nextImg, {
+      x: 400,
       opacity: 0
     }, {
       x: 0,
       opacity: 1,
-      duration: 1.5,
-      ease: "power2.inOut"
-    });
-  }
-});
+      duration: 0.8,
+      ease: "power2.inOut",
+      onComplete: () => {
+        // После анимации переключаем активный индекс
+        activeIndex = 1 - activeIndex;
+      }
+    }, 0);
 };
 
 // Функция запуска цикла
 const startCycle = () => {
-  // Первая смена — через 0.8 сек (чтобы не было резко)
   setTimeout(changePhoto, 800);
-
-  // Далее — цикл каждые 4 сек
   setInterval(changePhoto, 4000);
 };
 
@@ -283,14 +289,12 @@ const isInViewport = (el) => {
 };
 
 if (isInViewport(waveSlider)) {
-  console.log('Блок уже в зоне видимости — запускаем цикл');
   startCycle();
 } else {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          console.log('Блок вошёл в зону видимости — запускаем цикл');
           startCycle();
           observer.disconnect();
         }
