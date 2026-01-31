@@ -248,27 +248,23 @@ const changePhoto = () => {
   // Подготавливаем следующее изображение
   nextImg.src = photoPaths[currentPhotoIndex];
   nextImg.style.zIndex = '2'; // ставим на передний план
-  currentImg.style.zIndex = '1'; // убираем на задний
+  nextImg.style.opacity = '0'; // начинаем с прозрачности
   
-  // Анимация: текущее уходит влево, новое приходит справа
+  // Анимация: текущее затухает, новое появляется
   gsap.timeline()
     .to(currentImg, {
-      x: -400,
       opacity: 0,
-      duration: 0.8,
+      duration: 1.2,
       ease: "power2.inOut"
     }, 0)
-    .fromTo(nextImg, {
-      x: 400,
-      opacity: 0
-    }, {
-      x: 0,
+    .to(nextImg, {
       opacity: 1,
-      duration: 0.8,
+      duration: 1.2,
       ease: "power2.inOut",
       onComplete: () => {
         // После анимации переключаем активный индекс
         activeIndex = 1 - activeIndex;
+        currentImg.style.zIndex = '1'; // возвращаем на задний план
       }
     }, 0);
 };
