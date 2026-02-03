@@ -215,7 +215,7 @@
   max-width: 1000px;
   margin: 0 auto;
   overflow: hidden;
-  height: 800px;
+  height: 600px;
 }
 
 .wave-mask {
@@ -239,4 +239,193 @@
   z-index: 1;
   opacity: 1;
   transition: opacity 0.3s ease;
+}
+.form-container{
+  width: 100%;
+  background-color: #7C0000;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+.form-inner{
+  border-radius: 300px;
+  background-color: #FFFCF8;
+}
+.form-title{
+  width: 50%;
+  margin: 20px 0px auto;
+}
+.form-header{
+  color:#A10000;
+  font-family: "Andika";
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.survey {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.6;
+  color: #A10000;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.survey-item {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+}
+
+.survey-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.survey h3 {
+  font-weight: 400;
+  font-size: 1.0rem;
+  margin: 0 0 3px 0;
+  color: #A10000;
+  text-align: left;
+}
+
+.input-line {
+  position: relative;
+}
+
+.input-line input {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 1px solid #A10000;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Левая точка */
+.input-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 6px;
+  height: 6px;
+  background-color: #A10000;
+  border-radius: 50%;
+}
+
+/* Правая точка */
+.input-line::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -2px;
+  width: 6px;
+  height: 6px;
+  background-color: #A10000;
+  border-radius: 50%;
+}
+
+/* Состояние при фокусе */
+.input-line input:focus {
+  border-bottom-color: #c00; /* ваш акцентный красный */
+}
+
+.input-line input:focus + ::before,
+.input-line input:focus + ::after {
+  /* ❌ Это НЕ сработает — псевдоэлементы не реагируют на соседний :focus */
+}
+
+.input-field:focus,
+.input-subfield:focus {
+  outline: none;
+  border-color: #A10000;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px rgba(192, 0, 0, 0.1);
+}
+
+/* Опции (радио/чекбоксы) */
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 6px 0;
+  font-size: 0.9rem;
+}
+
+.options input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  border: 2px solid #c00; /* ← красная окантовка по умолчанию */
+  border-radius: 50%;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.options input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: #c00;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* При наведении — можно чуть затемнить или оставить как есть */
+.options input[type="radio"]:hover {
+  background-color: rgba(192, 0, 0, 0.05);
+}
+
+/* Стилизация чекбоксов внутри .options */
+.options input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  border: 2px solid #c00; /* ← красная окантовка всегда */
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 2px; /* лёгкое скругление, как в минимализме */
+}
+
+.options input[type="checkbox"]:checked {
+  background-color: #c00;
+}
+
+/* Для "Свой вариант" — подполе */
+.input-subfield {
+  margin-top: 8px;
+  margin-left: 28px;
+  font-size: 0.95rem;
+}
+
+.finish img{
+  width: 50%;
+}
+.finish-text{
+  font-family: "Andika";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  color:#7C0000;
+  margin-bottom: 10px;
 }
