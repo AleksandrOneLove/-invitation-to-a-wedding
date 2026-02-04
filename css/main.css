@@ -330,12 +330,7 @@
 
 /* Состояние при фокусе */
 .input-line input:focus {
-  border-bottom-color: #c00; /* ваш акцентный красный */
-}
-
-.input-line input:focus + ::before,
-.input-line input:focus + ::after {
-  /* ❌ Это НЕ сработает — псевдоэлементы не реагируют на соседний :focus */
+  border-bottom-color: #c00;
 }
 
 .input-field:focus,
