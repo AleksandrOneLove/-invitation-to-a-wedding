@@ -93,39 +93,38 @@
 <img src="img/sherwud.png" alt="" class="shervud" data-aos="zoom-in" data-aos-delay="500">
 
 <!-- Адрес -->
-<div class="texts-four" data-aos="fade-up" data-aos-delay="600">
+<div class="texts-four" data-aos="fade-up" data-aos-delay="200">
   <p class="text-four">Наше торжество состоится по адресу:</p>
   <p class="text-four">Московская обл., Пушкинский р-н,</p>
   <p class="text-four">д. Герасимиха, территория Раздолье, 5</p>
 </div>
 
 <!-- Кнопка карты -->
-<button class="map" id="map" data-aos="fade-up" data-aos-delay="700">Посмотреть на карте</button>
+<button class="map" id="map" data-aos="fade-up" data-aos-delay="200">Посмотреть на карте</button>
      <!-- Dress-code -->
-<h4 class="dress-code-title" data-aos="fade-up" data-aos-delay="800">DRESS-CODE</h4>
-<div class="dc-background" data-aos="fade-left" data-aos-delay="900">
-  <img src="img/19.png" alt="" class="dc1">
-  <img src="img/20.png" alt="" class="dc1">
-  <img src="img/21.png" alt="" class="dc1">
-  <img src="img/22.png" alt="" class="dc1">
+<h4 class="dress-code-title" data-aos="fade-up" data-aos-delay="200">DRESS-CODE</h4>
+<div class="dc-background">
+  <img src="img/19t.png" data-aos="fade-left" data-aos-delay="200" alt="" class="dc1">
+  <img src="img/20.png" alt="" class="dc1" data-aos="fade-right" data-aos-delay="200">
+  <img src="img/21-22.png" data-aos="fade-left" data-aos-delay="200" alt="" class="dc1">
 </div>
-<div class="dc-background2" data-aos="fade-right" data-aos-delay="1000">
-  <img src="img/dc-text1.png" alt="" class="dctext">
-  <img src="img/dc-text2.png" alt="" class="dctext">
-  <img src="img/dc-text3.png" alt="" class="dctext-last">
+<div class="dc-background2">
+  <img src="img/dc-text1.png" data-aos="zoom-in" data-aos-delay="200" alt="" class="dctext">
+  <img src="img/dc-text2.png"data-aos="zoom-in" data-aos-delay="400" alt="" class="dctext">
+  <img src="img/dc-text3.png" data-aos="zoom-in" data-aos-delay="600"alt="" class="dctext-last">
 </div>
-<div class="dc-background" data-aos="fade-left" data-aos-delay="1100">
-  <img src="img/26.png" alt="" class="dc1">
-  <img src="img/27-28.png" alt="" class="dc1">
-  <img src="img/29.png" alt="" class="dc1">
+<div class="dc-background">
+  <img src="img/26.png" alt="" class="dc1" data-aos="fade-right" data-aos-delay="200">
+  <img src="img/27-28.png" alt="" class="dc1" data-aos="fade-left" data-aos-delay="200">
+  <img src="img/29.png" alt="" class="dc1" data-aos="fade-right" data-aos-delay="200">
 </div>
 
 <!-- Пожелания -->
-<h4 class="wishes-title" data-aos="fade-up" data-aos-delay="1200">Пожелания</h4>
-<img src="img/32.png" alt="" class="wishes-img" data-aos="fade-right" data-aos-delay="1300">
-<img src="img/33.png" alt="" class="wishes-text" data-aos="fade-left" data-aos-delay="1400">
-<img src="img/34.png" alt="" class="wishes-img2" data-aos="fade-right" data-aos-delay="1500">
-<img src="img/35.png" alt="" class="wishes-text" data-aos="fade-left" data-aos-delay="1600">
+<h4 class="wishes-title" data-aos="fade-up" data-aos-delay="200">Пожелания</h4>
+<img src="img/32.png" alt="" class="wishes-img" data-aos="zoom-in" data-aos-delay="300">
+<img src="img/33.png" alt="" class="wishes-text" data-aos="zoom-in" data-aos-delay="300">
+<img src="img/34.png" alt="" class="wishes-img2" data-aos="zoom-in" data-aos-delay="300">
+<img src="img/35.png" alt="" class="wishes-text" data-aos="zoom-in" data-aos-delay="300">
       
       <div class="wave-slider" data-aos="fade-up">
         <div class="wave-mask"></div>
@@ -202,11 +201,11 @@
 
   <button type="button" class="map" style="width: 300px;" id="submit-form">Отправить</button>
 </div>
-          <div class="finish" data-aos="fade-up" data-aos-delay="1900">
-            <img src="img/48.png" alt="" class="finish-1">
-            <p class="finish-2 finish-text">По всем вопросам и пожеланиям в день <br>мероприятия и до него вы можете обращаться <br> к нашему организатору и ведущей.</p>
-            <img src="img/50.png" alt="">
-            <img src="img/51.png" alt="">
+          <div class="finish">
+            <img src="img/48.png" alt="" class="finish-1" data-aos="fade-up" data-aos-delay="200">
+            <p class="finish-2 finish-text" data-aos="fade-up" data-aos-delay="400">По всем вопросам и пожеланиям в день <br>мероприятия и до него вы можете обращаться <br> к нашему организатору и ведущей.</p>
+            <img src="img/50.png" alt="" data-aos="fade-up" data-aos-delay="600">
+            <img src="img/51.png" alt="" data-aos="fade-up" data-aos-delay="800">
           </div>
         </div>
       </div>
@@ -437,7 +436,7 @@ document.getElementById('submit-form').addEventListener('click', async () => {
   // Остаться на ночь
   const stay = document.querySelector('input[name="stay"]:checked')?.value || '—';
 
-  // Формируем сообщение
+
   const message = `
 🎉 *Новое подтверждение от гостя!*
 
@@ -446,7 +445,7 @@ document.getElementById('submit-form').addEventListener('click', async () => {
 3. *Аллергии/ограничения:* ${allergy}
 4. *Напитки:* ${drinksText}
 5. *Еда:* ${food === 'fish' ? 'Рыба' : food === 'meat' ? 'Мясо' : '—'}
-6. *Транспорт:* ${transport === 'metro' ? 'Заказной трансфер от метро Алтуфьево в 14:00' : transport === 'car' ? 'Своим ходом' : '—'}
+6. *Транспорт:* ${transport === 'metro' ? 'Заказной трансфер от м. Алтуфьево в 14:00' : transport === 'car' ? 'Своим ходом' : '—'}
 7. *Остаться на ночь:* ${stay === 'yes' ? 'Да' : stay === 'no' ? 'Нет' : '—'}
   `.trim();
 
