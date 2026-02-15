@@ -19,7 +19,7 @@
 </head>
 <body>
   <audio id="music-player" loop preload="auto">
-    <source src="audio/attestat.mp3" type="audio/mpeg">
+    <source src="audio/music.mp3" type="audio/mpeg">
     Ваш браузер не поддерживает аудио.
   </audio>
   <div class="invite">
@@ -281,7 +281,7 @@ tl
     const heart = document.querySelector(".seal");
     heart.addEventListener("click", () => {
       tl.play();
-       //musicPlayer.play().catch(e => console.log("Автовоспроизведение отклонено:", e));
+       musicPlayer.play().catch(e => console.log("Автовоспроизведение отклонено:", e));
        setTimeout(() => {
   AOS.init({
     duration: 1000,
