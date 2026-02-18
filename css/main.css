@@ -425,3 +425,14 @@
   color:#7C0000;
   margin-bottom: 10px;
 }
+.stop{
+  text-align: center !important;
+  font-weight: 600 !important;
+}
+
+#answerYes{
+  border: 2px solid #2a2a2a !important;
+}
+.answerYes{
+  color:#2a2a2a;
+}
